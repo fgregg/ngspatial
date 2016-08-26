@@ -15,9 +15,8 @@
 
 #' @import batchmeans Rcpp
 
-loadModule("moller", TRUE)
-loadModule("perfsampler", TRUE)
-utils::globalVariables(c("moller", "perfsampler"))
+moller = Module("moller")
+perfsampler = Module("perfsampler")
 
 .onAttach = function(libname, pkgname)
 {

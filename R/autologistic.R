@@ -65,7 +65,7 @@ rautologistic = function(X, A, theta)
     p = length(theta)
     if (ncol(X) != p - 1)
         stop("The given design matrix and vector of regression coefficients are not conformable.")
-    as.vector(perfsampler$rautologistic(X, A, theta))
+    as.vector(perfsampler$rautologisticcpp(X, A, theta))
 }
 
 autologistic.bmse = function(mat)
